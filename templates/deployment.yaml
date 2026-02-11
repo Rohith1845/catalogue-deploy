@@ -9,7 +9,7 @@ data:
 ---
 apiVersion: apps/v1
 kind: Deployment
-Metadata:
+metadata:
   name: catalogue
   namespace: roboshop
   labels: 
@@ -36,7 +36,7 @@ spec:
           imagePullPolicy: Always
           envFrom:
             - configMapRef:
-              name: catalogue
+                name: catalogue
           ports: 
           - name: liveness-port
             containerPort: 8080
