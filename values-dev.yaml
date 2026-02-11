@@ -1,3 +1,2 @@
 configmap:
-  name: catalogue-config
   mongoURL: "mongodb://mongodb:27017/catalogue"
