@@ -5,7 +5,7 @@ Metadata:
   namespace: roboshop
 data: 
   MONGO: "true"
-  MONGO_URL: "{{ .values-dev.configmap.mongoURL}}"
+  MONGO_URL: "{{ .Values-dev.configmap.mongoURL}}"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: catalogue
-          image: "{{ .values.deployment.imageRepo}}:{{ .values.deployment.imageVersion}}"
+          image: "{{ .Values.deployment.imageRepo}}:{{ .Values.deployment.imageVersion}}"
           imagePullPolicy: Always
           envFrom:
           - configMapRef:
@@ -65,7 +65,7 @@ spec:
     tier: backend 
   ports:
     - protocol: TCP
-      port: "{{ .values.service.servicePort }}"
+      port: "{{ .Values.service.servicePort }}"
       targetPort: 8080
 
 
