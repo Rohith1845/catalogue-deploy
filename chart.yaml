@@ -2,4 +2,4 @@ appVersion: v1
 name: nginx #chart name
 version: 1.0.0 # chart version
 description: catalogue installation
-apiVersion: v1 # this is application version
+apiVersion: v1 # this is application versions
