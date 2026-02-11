@@ -5,7 +5,7 @@ Metadata:
   namespace: roboshop
 data: 
   MONGO: "true"
-  MONGO_URL: "{{ .Values-dev.configmap.mongoURL}}"
+  MONGO_URL: "{{ .Values-dev.configmap.mongoURL }}"
 ---
 apiVersion: apps/v1
 kind: Deployment
