@@ -2,16 +2,16 @@
 
 properties([
     parameters([
-        string(name: 'appVersion' , value: "${appVersion}"),
+        string(name: 'appVersion' , defaultValue: ''),
         string(name: 'deploy_to' , value: "dev")
     ])
 ])
 
 def configMap =[
-        appVersion = configMap.get("appVersion"),
-        project = configMap.get("project"),
-        component = configMap.get("component"),
-        deploy_to = configMap.get("deploy_to")
+        project: "roboshop",
+        component: "component",
+        appVersion: (params.appVersion),
+        deploy_to: (params.deploy_to)
 ]
 
 EKSDeploy(configMap)
